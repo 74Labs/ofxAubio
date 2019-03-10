@@ -32,7 +32,7 @@ void ofxAubioOnset::setup()
     setup("default", 512, 256, 44100);
 }
 
-void ofxAubioOnset::setup(string method, int buf_s, int hop_s, int samplerate)
+void ofxAubioOnset::setup(std::string method, int buf_s, int hop_s, int samplerate)
 {
     ofxAubioBlock::setup(method, buf_s, hop_s, samplerate);
     onset = new_aubio_onset((char_t*)method.c_str(),
